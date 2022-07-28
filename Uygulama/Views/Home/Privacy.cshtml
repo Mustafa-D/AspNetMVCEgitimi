@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+ 
+<a asp-controller="Home" asp-action="SessionOlustur" class="btn btn-primary">Session Oluştur</a>
+<a asp-controller="Home" asp-action="SessionSil" class="btn btn-danger">Session Sil</a>
+<hr />
+@TempData["deger"]
+
+<hr /><a asp-action="CookieOlustur" asp-controller="Home">Cookie Oluştur</a>

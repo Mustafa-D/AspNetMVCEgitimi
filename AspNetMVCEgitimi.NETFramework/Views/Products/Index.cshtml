@@ -1,0 +1,20 @@
+﻿@model IEnumerable<AspNetMVCEgitimi.NETFramework.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-3">
+            <img src="~/Images/@product.Image" alt="@product.Name" class="img-fluid" height="250" />
+            <h2>@product.Name</h2>
+            <p>@product.Price</p>
+            <p><a class="btn btn-default" href="/Products/Detail/@product.Id">Ürünü İncele &raquo;</a></p>
+        </div>
+    }
+
+</div>

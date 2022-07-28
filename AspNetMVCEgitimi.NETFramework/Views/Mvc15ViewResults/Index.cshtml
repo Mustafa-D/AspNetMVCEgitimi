@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "MVC View Result Çeşitleri";
+}
+
+<h2>MVC View Result Çeşitleri</h2>
+
+<h3>ActionResult</h3>
+
+<p>
+    ActionResult ile eylem sonucunda geriye bir view dönüyoruz
+</p>
+
+<hr />
+
+@Html.ActionLink("RedirectResult", "Yonlendir")
+
+<hr />
+
+@Html.ActionLink("RedirectToRouteResult", "RoutaYonlendir")
+
+<hr />
+
+<h3>
+    PartialViewResult
+</h3>
+
+<br />
+
+<h4>Kategorileri Partialla Getir</h4>
+
+@Html.Partial("_KategorilerPartial")
+
+<h4>Kategorileri Actionla Getir</h4>
+
+@Html.Action("KategorileriGetirPartial")
+
+<h4>Kategorileri Model Kullanarak Actionla Getir</h4>
+
+@Html.Action("KategorileriModelleGetirPartial")
+
+<h3>FileResult</h3>
+
+@Html.ActionLink("Pdf Dosya Görüntüle", "PdfDosyaGoruntule")
+
+<h3>File Stream Result</h3>
+
+@Html.ActionLink("Metin Dosyası İndir", "MetinDosyasiIndir")
+
+<h3>JavaScript Result</h3>
+
+@Html.ActionLink("JavaScript Result", "JsResult")
+
+@*<script src="/Mvc15ViewResults/JsResult"></script>*@
+
+<script src="/Mvc15ViewResults/JsButtonClick"></script>
+
+<div>
+    <input id="Button1" type="button" value="Tıkla" onclick="button_click()" />
+</div>
+
+<hr />
+
+@Html.ActionLink("Json Result", "JsonGoruntule")
+
+<hr />
+
+@Html.ActionLink("Xml Content Result", "XmlContentResult")
